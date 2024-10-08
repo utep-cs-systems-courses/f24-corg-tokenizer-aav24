@@ -17,7 +17,15 @@ void add_history(List *list, char *str){
   }
   // create a new item
   Item *new_item = (Item *) malloc(sizeof(Item));
+  if (new_item == NULL){
+    printf("memory allocation failed\n");
+    return;
+  }
   new_item->str = str;
+  if(new_item == NULL){
+    printf("String allocation failed\n");
+    return;
+  }
   new_item->next = NULL;
   if(!list->root){    /* add item to root if root is empty */
     new_item->id = 1;
