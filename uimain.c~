@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+  puts("Welcome to the tokenizer ui!");
+
+  while(1){
+
+    char input[20];
+    printf("$ ");
+    fgets(input, 20, stdin);
+    
+    printf("%s", input);
+
+    goto done;
+  }
+
+  
+ done:
+  return 0;
+
+}

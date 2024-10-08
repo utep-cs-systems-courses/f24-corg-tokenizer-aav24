@@ -15,7 +15,7 @@ int non_space_char(char c);
 /* Returns a pointer to the first character of the next 
    space-separated token in zero-terminated str.  Return a zero pointer if 
    str does not contain any tokens. */
-char *token_start(char *str); 
+char *token_start(char *str);
 
 /* Returns a pointer terminator char following *token */
 char *token_terminator(char *token);
