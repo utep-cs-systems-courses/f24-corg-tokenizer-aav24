@@ -82,7 +82,8 @@ char *copy_str(char *inStr, short len){
 char **tokenize(char* str){
 
   int num_tokens = count_tokens(str);
-  char **tokens = (char **) malloc(num_tokens + 1);    /* allocates space for tokens and 0 term.)*/
+  char **tokens = (char **) malloc((num_tokens + 1) * sizeof(char *));
+  /* allocates space for tokens and 0 term.)*/
   
   char *token = token_start(str);    /* gets the beginning of first token */
   int i = 0;
