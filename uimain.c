@@ -46,9 +46,9 @@ int main()
   
   while(1){
     // obtain input
-    char input[20];
+    char input[40];
     printf("$ ");
-    fgets(input, 20, stdin);
+    fgets(input, 40, stdin);
 
     // check for exit
     remove_newline(input);
@@ -80,7 +80,7 @@ int main()
     char **tokens = tokenize(input);
     print_tokens(tokens);
     for (int i = 0; tokens[i] != NULL; i++){
-      add_history(history, tokens[i]);
+      add_history(history, copy_str(tokens[i],len(tokens[i])));
     }
 
     //goto done;
