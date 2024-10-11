@@ -45,9 +45,10 @@ int main()
   List *history = init_history();
   
   while(1){
+    printf("\nType 'history' for history & !(number) for a specific item, 'exit' to exit\n");
     // obtain input
     char input[40];
-    printf("\n$ ");
+    printf("$ ");
     fgets(input, 40, stdin);
 
     // check for exit
@@ -94,7 +95,7 @@ int main()
   
  done:
   free_history(history);
-  printf("See you later!");
+  printf("See you later!\n");
   return 0;
 
 }
